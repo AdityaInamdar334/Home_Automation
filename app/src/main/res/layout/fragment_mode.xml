@@ -1,0 +1,455 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ModeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+    <include
+        layout="@layout/appbar"/>
+    <TextView
+        android:id="@+id/date_and_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+
+        android:capitalize="none"
+        android:text=" date and time "
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+
+        android:shadowColor="#FFFCFC"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="6"
+        />
+
+    <TextView
+        android:id="@+id/Modes_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@+id/date_and_time"
+        android:layout_marginLeft="15dp"
+        android:text="General Modes"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+
+        android:shadowColor="#AEABAB"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="8"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/morning_card"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/Modes_text"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sunrise2"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/morning_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"></TextView>
+
+                    <TextView
+                        style=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MORNING MODE "
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp"
+
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/fan_bedroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/bulb_morning_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                />
+                            <ImageView
+                                android:id="@+id/fan_morning_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:paddingLeft="20dp"
+                                />
+                            <ImageView
+                                android:id="@+id/temperature_morning_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/thermometer"/>
+                            <ImageView
+                                android:id="@+id/humidity_morning_mode"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/humidity"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+
+                    <TextView
+                        android:id="@+id/bulb_status_bedroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foregroundGravity="right"
+                         />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/evening_card"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="20dp"
+        android:layout_below="@+id/morning_card"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/evening_mode1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/evening_mode_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="     "
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" EVENING MODE "
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp"
+
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/fan_hall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+
+                    <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/bulb_evening_mode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            ></ImageView>
+                        <ImageView
+                            android:id="@+id/fan_evening_mode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                                                        android:paddingLeft="10dp"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/thermometer"
+                            android:paddingLeft="10dp"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/humidity"
+                            android:paddingLeft="10dp"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/led_status_hall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foregroundGravity="right"
+                         />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/night_card"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="20dp"
+        android:layout_below="@+id/evening_card"
+        android:layout_marginBottom="100dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/night"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/night_mode_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="     "
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" NIGHT MODE "
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp"
+
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/fan_hall_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/door_sensor_night_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                ></ImageView>
+                            <ImageView
+                                android:id="@+id/motion_sensor_night_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:paddingLeft="10dp"
+                                />
+                            <ImageView
+                                android:id="@+id/sensor_night_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:paddingLeft="10dp"
+                                />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/thermometer"
+                                android:paddingLeft="10dp"
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/led_status_hall_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foregroundGravity="right"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

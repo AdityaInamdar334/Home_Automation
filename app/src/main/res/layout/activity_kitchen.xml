@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kitchen">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/appbar"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="-178dp" />
+
+    <ImageView
+        android:id="@+id/main_img_kitchen"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="8dp"
+        android:transitionName="kitchen_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kitchen" />
+
+    <TextView
+        android:id="@+id/kitchen_text"
+        android:layout_width="129dp"
+        android:layout_height="31dp"
+        android:text="KITCHEN"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:transitionName="kitchen_text_anim"
+
+        app:layout_constraintBottom_toBottomOf="@+id/main_img_kitchen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="@+id/main_img_kitchen"
+        app:layout_constraintTop_toTopOf="@+id/include3"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_light_kitchen"
+        android:transitionName="kitchen_bulb_anim"
+        android:layout_width="144dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+
+
+        android:drawablePadding="0dp"
+        android:text="ToggleButton"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="@+id/toggleButton_fan_kitchen"
+        app:layout_constraintStart_toStartOf="@+id/include3"
+        app:layout_constraintTop_toBottomOf="@+id/main_img_kitchen" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_fan_kitchen"
+        android:layout_width="144dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="50dp"
+        android:transitionName="kitchen_fan_anim"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="103dp"
+        android:text="ToggleButton"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/temp_kitchen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_img_kitchen"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Temperature"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton_light_kitchen"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/temp_kitchen"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/textView5"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        android:transitionName="text_temp_kitchen_anim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <ProgressBar
+        android:id="@+id/progressBartemp_kitchen"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="370dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="10dp"
+        android:progressDrawable="@drawable/progress_bar_states"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_kitchen" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:text="Humidity"
+
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBartemp_kitchen"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/humid_kitchen"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/textView6"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        android:transitionName="text_humid_kitchen_anim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBarhumid_kitchen"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="370dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="10dp"
+
+
+        android:progressDrawable="@drawable/progress_bar_states"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humid_kitchen" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="360dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/progressBartemp_kitchen"
+        app:layout_constraintTop_toTopOf="@+id/include3"
+        app:layout_constraintVertical_bias="0.004"
+        tools:layout_editor_absoluteX="-15dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

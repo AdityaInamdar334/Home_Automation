@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+     >
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+    <include
+        layout="@layout/appbar"/>
+
+    <TextView
+        android:id="@+id/date_and_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+
+        android:capitalize="none"
+        android:text=" date and time "
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+
+        android:shadowColor="#FFFCFC"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="6"
+        />
+
+    <TextView
+        android:id="@+id/loations_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@+id/date_and_time"
+        android:layout_marginLeft="15dp"
+        android:text="Locations"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+
+        android:shadowColor="#AEABAB"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="8"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bedroom_card"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_below="@+id/loations_text"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp">
+
+        <ImageView
+            android:id="@+id/bed_card_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="bed_image"
+            android:background="@drawable/bed_img12"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#212121"
+                        android:shadowDx="10"
+                        android:shadowDy="10"
+                        android:shadowRadius="8"
+                        android:text="BEDROOM"
+                        android:transitionName="bed_text_anim"
+                        android:id="@+id/bed_text"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"
+
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                    >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+                            <ImageView
+                                android:id="@+id/bulb_ic_bedroom_card"
+                                android:layout_width="wrap_content"
+                                android:transitionName="bed_bulb_anim"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bulb_off_ic"
+                                >
+
+
+                            </ImageView>
+                            <ImageView
+                                android:id="@+id/fan_ic_bedroom_card"
+                                android:transitionName="bed_fan_anim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="18dp"
+                                android:layout_toRightOf="@+id/bulb_ic_bedroom_card"
+                                android:src="@drawable/fan_off_ic"
+                                ></ImageView>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/thermometer_ic_bed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/thermometer"
+
+                            >
+
+                        </ImageView>
+
+                        <TextView
+
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/text_temp_bed"
+                            android:transitionName="text_temp_bed_anim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/thermometer_ic_bed"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="10dp"
+                            android:text=" temp"
+                            android:textSize="16sp"
+                            android:shadowColor="#212121"
+                            android:shadowDx="6"
+                            android:shadowDy="6"
+                            android:shadowRadius="5"
+                            android:textColor="#FFFFFF"></TextView>
+
+
+                            <ImageView
+                                android:layout_toRightOf="@id/text_temp_bed"
+                                android:layout_marginLeft="39dp"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/humidity_ic_bed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/humidity"></ImageView>
+                            <TextView
+                                android:transitionName="text_humid_bed_anim"
+                                android:layout_marginTop="15dp"
+                                android:paddingLeft="7dp"
+                                android:layout_toRightOf="@+id/humidity_ic_bed"
+                                android:id="@+id/text_humid_bed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="humidity  "
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+
+                                ></TextView>
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="20dp"
+        android:id="@+id/hall_card"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/bedroom_card"
+        >
+
+        <ImageView
+            android:id="@+id/hall_card_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="hall_image"
+            android:background="@drawable/hall_img12"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hall_img12"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hall_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#212121"
+                        android:shadowDx="10"
+                        android:shadowDy="10"
+                        android:shadowRadius="8"
+                        android:text="LIVING ROOM"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:transitionName="hall_text_anim"
+
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:id="@+id/bulb_ic_hall_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bulb_off_ic"
+                            android:transitionName="hall_bulb_anim"
+
+                            >
+
+
+                        </ImageView>
+                        <ImageView
+                            android:id="@+id/fan_ic_hall_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="18dp"
+                            android:layout_toRightOf="@+id/bulb_ic_hall_card"
+                            android:transitionName="hall_fan_anim"
+
+                            android:src="@drawable/fan_off_ic"
+                            ></ImageView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/thermometer_ic_hall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/thermometer"
+                            >
+
+                        </ImageView>
+
+                        <TextView
+
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/text_temp_hall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/thermometer_ic_hall"
+                            android:transitionName="text_temp_hall_anim"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="10dp"
+                            android:text=" temp"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"></TextView>
+
+
+                        <ImageView
+                            android:layout_toRightOf="@id/text_temp_hall"
+                            android:layout_marginLeft="39dp"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/humidity_ic_hall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/humidity"></ImageView>
+                        <TextView
+                            android:layout_marginTop="15dp"
+                            android:paddingLeft="7dp"
+                            android:transitionName="text_humid_hall_anim"
+                            android:layout_toRightOf="@+id/humidity_ic_hall"
+                            android:id="@+id/text_humid_hall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="humidity "
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+
+                            ></TextView>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="20dp"
+        android:id="@+id/kitchen_card"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@+id/hall_card"
+        >
+        <ImageView
+            android:id="@+id/kitchen_card_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="kitchen_image"
+            android:background="@drawable/kitchen"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"><!--have to change image-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/kitchen_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#212121"
+                        android:shadowDx="10"
+                        android:shadowDy="10"
+                        android:shadowRadius="8"
+                        android:transitionName="kitchen_text_anim"
+                        android:text="KITCHEN"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   "
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+
+                        ></TextView>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <ImageView
+                            android:id="@+id/bulb_ic_kitchen_card"
+                            android:layout_width="wrap_content"
+                            android:transitionName="kitchen_bulb_anim"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bulb_off_ic"
+                            >
+
+
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/fan_ic_kitchen_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/bulb_ic_kitchen_card"
+                            android:paddingLeft="18dp"
+                            android:src="@drawable/fan_off_ic"
+                            android:transitionName="kitchen_fan_anim"></ImageView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/thermometer_ic_kitchen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:src="@drawable/thermometer"
+                            >
+
+                        </ImageView>
+
+                        <TextView
+
+                            android:layout_marginTop="5dp"
+                            android:transitionName="text_temp_kitchen_anim"
+                            android:id="@+id/text_temp_kitchen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/thermometer_ic_kitchen"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="10dp"
+                            android:text=" temp"
+                            android:textSize="16sp"
+                            android:textColor="#FFFFFF"></TextView>
+
+
+                        <ImageView
+                            android:layout_toRightOf="@id/text_temp_kitchen"
+                            android:layout_marginLeft="39dp"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/humidity_ic_kitchen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/humidity"></ImageView>
+                        <TextView
+                            android:transitionName="text_humid_kitchen_anim"
+                            android:layout_marginTop="15dp"
+                            android:paddingLeft="7dp"
+                            android:layout_toRightOf="@+id/humidity_ic_kitchen"
+                            android:id="@+id/text_humid_kitchen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="humidity "
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+
+                            ></TextView>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
